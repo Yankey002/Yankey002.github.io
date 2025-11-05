@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>度量人性的投资模型 - 交易说明书</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF', // 主色：专业金融蓝
+                        secondary: '#4E5969', // 辅助文字色
+                        light: '#F5F7FA', // 浅色背景
+                        border: '#E5E6EB', // 边框色
+                        accent: '#EEF4FF', // 强调背景色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-title {
+                @apply text-[24px] font-bold text-primary mb-4 pl-4 border-l-4 border-primary;
+            }
+            .sub-title {
+                @apply text-[20px] font-semibold text-secondary mb-3 mt-8;
+            }
+            .quote {
+                @apply bg-light border-l-4 border-primary p-4 my-6 italic text-secondary;
+            }
+            .definition {
+                @apply bg-accent border border-[#C9D8F0] rounded-lg p-5 my-6 font-medium;
+            }
+            .img-container {
+                @apply text-center my-8;
+            }
+            .img-desc {
+                @apply text-[14px] text-secondary mt-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-secondary font-sans">
+    <!-- 顶部导航栏（固定） -->
+    <header class="fixed top-0 left-0 right-0 bg-primary text-white z-50 shadow-md">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- 标题 -->
+                <h1 class="text-[18px] md:text-[22px] font-bold">度量人性的投资模型</h1>
+                
+                <!-- 桌面端导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#bottom-thought" class="hover:text-accent transition-colors">底层思维</a>
+                    <a href="#trade-explain" class="hover:text-accent transition-colors">交易说明</a>
+                    <a href="#wealth" class="hover:text-accent transition-colors">共襄财富</a>
+                </nav>
+                
+                <!-- 移动端汉堡菜单 -->
+                <button id="menuBtn" class="md:hidden text-white text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- 移动端导航菜单（默认隐藏） -->
+            <nav id="mobileMenu" class="md:hidden hidden bg-[#0E42D2] py-4">
+                <div class="flex flex-col space-y-3 px-4">
+                    <a href="#bottom-thought" class="hover:text-accent transition-colors py-2">底层思维</a>
+                    <a href="#trade-explain" class="hover:text-accent transition-colors py-2">交易说明</a>
+                    <a href="#wealth" class="hover:text-accent transition-colors py-2">共襄财富</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区（顶部留空，避免被导航遮挡） -->
+    <main class="container mx-auto px-4 md:px-8 pt-24 pb-16">
+        <!-- 第一部分：底层思维（高维） -->
+        <section id="bottom-thought" class="mb-16">
+            <h2 class="text-[28px] font-bold text-[#1D2129] mb-8">底层思维（高维）</h2>
+            
+            <!-- 易有三易 -->
+            <div class="mb-10">
+                <h3 class="section-title">易有三易</h3>
+                <p class="mb-4">这套投资模型底层思维源于《周易》的“易有三易”——不易、变易、简易。万事万物的周期变化规律均遵循“三易”，投资市场作为万千事物的一种，涨跌规律自然也不例外。</p>
+                <p class="mb-4">《周易》通行版本将“三易”顺序定义为“变易、不易、简易”，而作者的核心领悟是：<span class="text-primary font-medium">先掌握“不易”（不变规律），再灵活“变易”（随机应变），最终回归“简易”（至简逻辑）</span>。</p>
+                
+                <!-- 三易对比表 -->
+                <div class="overflow-x-auto my-6">
+                    <table class="w-full border-collapse border border-border">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-border px-6 py-3 text-left font-bold">维度</th>
+                                <th class="border border-border px-6 py-3 text-left font-bold">核心逻辑</th>
+                                <th class="border border-border px-6 py-3 text-left font-bold">示例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-border px-6 py-4 font-medium">不易</td>
+                                <td class="border border-border px-6 py-4">事物运行的底层不变规律</td>
+                                <td class="border border-border px-6 py-4">春夏秋冬四季轮替</td>
+                            </tr>
+                            <tr class="bg-light/50">
+                                <td class="border border-border px-6 py-4 font-medium">变易</td>
+                                <td class="border border-border px-6 py-4">基于不变规律的动态调整</td>
+                                <td class="border border-border px-6 py-4">春种、夏长、秋收、冬藏</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-border px-6 py-4 font-medium">简易</td>
+                                <td class="border border-border px-6 py-4">顺应规律的极简执行</td>
+                                <td class="border border-border px-6 py-4">按四季规律耕种与收获</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 不易 -->
+            <div class="mb-10">
+                <h3 class="section-title">不易</h3>
+                <p class="mb-4">投资市场唯一不变的核心是<span class="text-primary font-medium">人性</span>——千万年来，人性中的贪婪与恐慌从未改变。</p>
+                <p class="mb-4">人性的贪婪与恐慌遵循“反者，道之动也”（《道德经》）的规律：任何事物的发展必然走向其反面。度量出人性的贪婪与恐慌，便抓住了“不易”的核心；基于此随机应变，持续稳定盈利自然水到渠成。</p>
+                <p class="mb-4">需特别注意：基本面分析、技术分析、量化策略等传统投资方式均为“三维世界产物”，而人性是更高维度的存在。利用人性的贪婪与恐慌进行交易，是对传统投资方式的“降维打击”。</p>
+                
+                <!-- 人性四象图 -->
+                <div class="img-container">
+                    <img src="images/图1.png" alt="人性贪婪与恐慌的四象对应" class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+                    <p class="img-desc">图1：人性贪婪与恐慌的四象对应（老阳=贪婪，老阴=恐慌；事物发展：弱→强/强→弱循环）</p>
+                </div>
+            </div>
+            
+            <!-- 变易 -->
+            <div class="mb-10">
+                <h3 class="section-title">变易</h3>
+                <p class="mb-4">作者研学《缠论》十余年，并于2019年跟随缠师嫡传弟子系统学习三年，最终萃取出核心交易工具——<span class="text-primary font-medium">线段</span>。</p>
+                
+                <!-- 线段定义 -->
+                <div class="definition">
+                    <p><i class="fa fa-bookmark text-primary mr-2"></i>线段定义：MA5（5日均线）穿过MA34（34日均线），线段的起点与终点分别位于MA34两侧。</p>
+                </div>
+                
+                <p class="mb-4">对市场走势的完全分类，遵循“道生一、一生二、二生三、三生万物”的自然法则，核心分类仅两种：</p>
+                <ul class="list-disc pl-6 mb-4 space-y-2">
+                    <li><span class="font-medium">离开段</span>：趋势性方向明确的走势</li>
+                    <li><span class="font-medium">非离开段</span>：震荡整理方向的走势</li>
+                </ul>
+                <p>当交易系统将走势分出“第三种类型”时，交易将失去可控性（因“三生万物”会衍生无限变量），需重新优化系统。</p>
+            </div>
+            
+            <!-- 简易 -->
+            <div class="mb-10">
+                <h3 class="section-title">简易</h3>
+                <div class="quote">
+                    “不为事先，动而辄随” ——《黄石公三略》
+                </div>
+                <p class="mb-4">核心逻辑：<span class="text-primary font-medium">不预判走势</span>，仅需等待投资模型计算出的“不易”信号出现，再按“变易”的两种走势分类执行交易即可。</p>
+                <div class="quote">
+                    缠师语录：“相信你的眼睛，不要相信你的脑筋，更不要让你的脑筋动了你的眼睛，无我是顺势而为，无我无须用脑筋分析，只要看和干！”
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第二部分：交易说明 -->
+        <section id="trade-explain" class="mb-16">
+            <h2 class="text-[28px] font-bold text-[#1D2129] mb-8">交易说明</h2>
+            
+            <!-- 不易说明 -->
+            <div class="mb-12">
+                <h3 class="section-title">“不易”说明</h3>
+                <p class="mb-4">“不易”信号通过走势图的<span class="font-medium">主图指标</span>与<span class="font-medium">副图指标</span>双重呈现，分别对应指数与成分股的人性度量。</p>
+                
+                <h4 class="sub-title">1. 主图指标（指数级贪婪/恐慌）</h4>
+                <p class="mb-4">依据投资模型计算指数（含上证指数、行业指数等）的“贪婪-恐慌”值，通过<span class="text-primary font-medium">斐波那契数列</span>标注长期强弱等级，具体对应：</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2">
+                    <li>3-33：短期贪婪/恐慌强度</li>
+                    <li>5-55：中期贪婪/恐慌强度</li>
+                    <li>8-89：长期贪婪/恐慌强度</li>
+                </ul>
+                
+                <h4 class="sub-title">2. 副图指标（成分股级贪婪/恐慌）</h4>
+                <p class="mb-4">计算指数下所有成分股的“贪婪-恐慌”值，通过颜色与数字直观呈现：</p>
+                <ul class="list-disc pl-6 mb-4 space-y-2">
+                    <li><span class="text-red-500 font-medium">红柱</span>：代表成分股整体“恐慌”情绪</li>
+                    <li><span class="text-green-500 font-medium">绿柱</span>：代表成分股整体“贪婪”情绪</li>
+                    <li><span class="text-primary font-medium">柱体数字</span>：标识“贪婪/恐慌值”创N天新高（如“30”代表创3000天最大极值，约12年，属十年一遇机会）</li>
+                </ul>
+                
+                <!-- 上证指数顶底信号截图 -->
+                <div class="img-container">
+                    <img src="images/图2-1.png" alt="上证指数近2年顶底信号（真实非模拟）" class="max-w-full h-auto border border-border rounded-lg shadow-sm mb-4">
+                    <img src="images/图2-2.png" alt="上证指数近2年顶底信号（真实非模拟）" class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+                    <p class="img-desc">图2：上证指数近2年日线顶底信号截图（真实非模拟，标注关键点位与背离值）</p>
+                </div>
+                <p class="text-center text-secondary mt-2">注：精确的顶底信号是控制风险、把握机会的核心前提。</p>
+            </div>
+            
+            <!-- 变易说明 -->
+            <div class="mb-12">
+                <h3 class="section-title">“变易”说明</h3>
+                <p class="mb-4">基于“不易”信号的走势分类，将交易场景分为“进入段/离开段”与“非离开段”，对应不同策略。</p>
+                
+                <!-- 进入段/离开段 -->
+                <div class="definition mb-8">
+                    <p><i class="fa fa-arrow-right text-primary mr-2"></i>进入段/离开段定义：长期“恐慌”信号出现为起点，长期“贪婪”信号出现为终点（趋势性行情）。</p>
+                    <p class="mt-2"><i class="fa fa-lightbulb-o text-primary mr-2"></i>交易策略：长期“恐慌”信号出现后，逐步满仓，忽略短期市场波动，耐心持有至长期“贪婪”信号离场。</p>
+                </div>
+                
+                <!-- 非离开段 -->
+                <div class="definition mb-8">
+                    <p><i class="fa fa-arrow-right text-primary mr-2"></i>非离开段定义：短期“恐慌”信号出现为起点，短期“贪婪”信号出现为终点（震荡行情）。</p>
+                    <p class="mt-2"><i class="fa fa-lightbulb-o text-primary mr-2"></i>交易策略：长期“贪婪”信号出现后，市场必入震荡，需先离场或大幅减仓；再用“自身可承受仓位”，依据短期信号做波段短差。</p>
+                </div>
+                
+                <!-- 走势分类示例图 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+                    <div class="img-container">
+                        <img src="images/图3-1.png" alt="2440~3731期间走势分类" class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+                        <p class="img-desc">图3-1：2440~3731期间走势分类（标注进入段/离开段/非离开段）</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="images/图3-2.png" alt="当前市场走势分类" class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+                        <p class="img-desc">图3-2：当前市场走势分类（实时标注震荡段与趋势段）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 简易说明 -->
+            <div class="mb-10">
+                <h3 class="section-title">“简易”说明</h3>
+                <p class="mb-4">该模型的“简易”核心体现在三大优势，彻底简化投资决策流程：</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                    <!-- 优势1 -->
+                    <div class="bg-light p-6 rounded-lg shadow-sm border border-border">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-trophy"></i></div>
+                        <h4 class="font-bold text-lg mb-3">有容乃大，贵在前知</h4>
+                        <p class="text-sm">长期信号覆盖重要指数/行业指数，可容纳大资金量；底部建仓、顶部离场均能“先人一步”，操作从容。</p>
+                    </div>
+                    
+                    <!-- 优势2 -->
+                    <div class="bg-light p-6 rounded-lg shadow-sm border border-border">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-scissors"></i></div>
+                        <h4 class="font-bold text-lg mb-3">化繁为简</h4>
+                        <p class="text-sm">对比不同指数的恐慌强度（越恐慌未来涨幅越大），锁定潜力行业，交易对应ETF/期货或优选个股，流程极简。</p>
+                    </div>
+                    
+                    <!-- 优势3 -->
+                    <div class="bg-light p-6 rounded-lg shadow-sm border border-border">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-leaf"></i></div>
+                        <h4 class="font-bold text-lg mb-3">回归生活本质</h4>
+                        <p class="text-sm">摆脱基本面、技术面、消息面的复杂解读，将时间用于体验生活、创造更多价值。</p>
+                    </div>
+                </div>
+                
+                <!-- 指数恐慌强度对比图 -->
+                <div class="img-container">
+                    <img src="images/图4-1.png" alt="上证指数/A50/HS300/创业板/中证500恐慌强度对比" class="max-w-full h-auto border border-border rounded-lg shadow-sm mb-4">
+                    <img src="images/图4-2.png" alt="上证指数/A50/HS300/创业板/中证500恐慌强度对比" class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+                    <p class="img-desc">图4-1和图4-2：多指数恐慌强度对比（上证指数、A50、HS300、创业板、中证500）</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第三部分：共襄财富 -->
+        <section id="wealth">
+            <h2 class="text-[28px] font-bold text-[#1D2129] mb-8">共襄财富</h2>
+            
+            <div class="bg-light border border-border rounded-lg p-8 md:p-10 shadow-sm">
+                <p class="text-lg mb-6">若您对“度量人性的投资模型”的逻辑与实践价值感兴趣，欢迎携手合作，共享投资机遇！</p>
+                
+                <!-- 联系方式 -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fa fa-user text-primary text-xl w-8"></i>
+                        <span class="ml-4 font-medium">联系人：杨兴波</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-phone text-primary text-xl w-8"></i>
+                        <a href="tel:13810045990" class="ml-4 hover:text-primary transition-colors">电话：13810045990</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-envelope text-primary text-xl w-8"></i>
+                        <a href="mailto:yangxingbo@sina.com" class="ml-4 hover:text-primary transition-colors">邮箱：yangxingbo@sina.com</a>
+                    </div>
+                </div>
+                
+                <!-- 免责声明 -->
+                <div class="mt-8 pt-6 border-t border-border text-sm text-secondary/80">
+                    <p><i class="fa fa-exclamation-circle text-yellow-500 mr-2"></i>免责声明：投资有风险，决策需谨慎。本模型仅提供分析工具，不构成投资建议，投资者需自行承担交易风险。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部版权信息 -->
+    <footer class="bg-[#1D2129] text-white py-8">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p class="mb-2">© 2025 度量人性投资模型 保留所有权利</p>
+            <p class="text-sm text-white/60">本网页内容基于《度量人性的投资模型_交易说明书》优化呈现</p>
+        </div>
+    </footer>
+
+    <!-- 脚本：移动端菜单控制 + 平滑滚动 -->
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // 切换图标（ bars ↔ times ）
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // 平滑滚动（导航点击跳转）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 移动端菜单自动关闭
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                
+                // 滚动到目标位置（顶部留空，避免被导航遮挡）
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 滚动时导航栏样式优化（可选）
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+                header.classList.add('bg-primary/95');
+            } else {
+                header.classList.remove('shadow-lg');
+                header.classList.remove('bg-primary/95');
+            }
+        });
+    </script>
+</body>
+</html>
